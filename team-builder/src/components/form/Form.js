@@ -19,7 +19,7 @@ const Form = (props) => {
 	}
 
 	return (
-		<div>
+		<div className="form">
 			<form onSubmit={handleSubmit} aria-label="Form">
 				<label htmlFor="name">
 					Name:
