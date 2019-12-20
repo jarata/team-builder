@@ -25,14 +25,14 @@ function App() {
   return (
     <div className="App">
       <Form addMember={addMember}/>
+      <div><h3>Member Output:</h3></div>
       <div className="members">
-        <h3>Member Output:</h3>
         {members.map((m, i) =>
           <ul className="member" key={i}>
-            <p>{m.id}</p>
-            <p>{m.name}</p>
-            <p>{m.email}</p>
-            <p>{m.role}</p>
+            <p><span>ID: </span>{m.id}</p>
+            <p><span>Name: </span>{m.name}</p>
+            <p><span>eMail: </span>{m.email}</p>
+            <p><span>Role: </span>{m.role}</p>
           </ul>
         )}
       </div>

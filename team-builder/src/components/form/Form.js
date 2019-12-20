@@ -21,36 +21,41 @@ const Form = (props) => {
 	return (
 		<div className="form">
 			<form onSubmit={handleSubmit} aria-label="Form">
-				<label htmlFor="name">
-					Name:
-					<input
-						id="name"
-						type="text"
-						name="name"
-						value={member.name}
-						onChange={handleChange}/>
-				</label>
-				<br/>
-				<label htmlFor="email">
-					eMail:
-					<input
-						id="email"
-						type="text"
-						name="email"
-						value={member.email}
-						onChange={handleChange}/>
-				</label>
-				<br/>
-				<label htmlFor="role">
-					Role:
-					<input
-						id="role"
-						type="text"
-						name="role"
-						value={member.role}
-						onChange={handleChange}/>
-				</label>
-				<br/>
+				<div id="input-container">
+					<div className="input">
+						<label htmlFor="name">
+							Name:
+							<input
+								id="name"
+								type="text"
+								name="name"
+								value={member.name}
+								onChange={handleChange}/>
+						</label>
+					</div>
+					<div className="input">
+						<label htmlFor="email">
+							eMail:
+							<input
+								id="email"
+								type="text"
+								name="email"
+								value={member.email}
+								onChange={handleChange}/>
+						</label>
+					</div>
+					<div className="input">
+						<label htmlFor="role">
+							Role:
+							<input
+								id="role"
+								type="text"
+								name="role"
+								value={member.role}
+								onChange={handleChange}/>
+						</label>
+					</div>
+				</div>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
