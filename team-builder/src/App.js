@@ -14,14 +14,14 @@ function App() {
 
   const addMember = (member) => {
     const newMember = {
-      id: 1,
+      id: members.length + 1,
       name: member.name,
       email: member.email,
       role: member.role
     };
     setMembers([...members, newMember])
   }
-  console.log("App:", members)
+
   return (
     <div className="App">
       <Form addMember={addMember}/>
