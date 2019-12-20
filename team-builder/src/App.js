@@ -22,6 +22,10 @@ function App() {
     setMembers([...members, newMember])
   }
 
+  const deleteMember = (id) => {
+    setMembers(members.filter(m => m.id !== id))
+  }
+
   return (
     <div className="App">
       <Form addMember={addMember}/>
@@ -33,6 +37,10 @@ function App() {
             <p><span>Name: </span>{m.name}</p>
             <p><span>eMail: </span>{m.email}</p>
             <p><span>Role: </span>{m.role}</p>
+            <div>
+              <button>Edit</button>
+              <button onClick={() => deleteMember(m.id)}>Delete</button>
+            </div>
           </ul>
         )}
       </div>
