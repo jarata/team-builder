@@ -27,8 +27,8 @@ function App() {
       <Form addMember={addMember}/>
       <div className="members">
         <h3>Member Output:</h3>
-        {members.map(m =>
-          <ul className="member" key={m}>
+        {members.map((m, i) =>
+          <ul className="member" key={i}>
             <p>{m.id}</p>
             <p>{m.name}</p>
             <p>{m.email}</p>
